@@ -2,23 +2,25 @@ import React from 'react'
 
 const TopBar = () => {
     return (
-        <div>
-            <div>
-                <h1>Home</h1>
+        <nav>
+            <div className='border flex justify-center space-x-5 py-4'>
+                <div>
+                    <a>Home</a>
+                </div>
+                <div>
+                    <a>About</a>
+                </div>
+                <div>
+                    <a >Projects</a>
+                </div>
+                <div>
+                    <a >Blog</a>
+                </div>
+                <div>
+                    <a >Contact</a>
+                </div>
             </div>
-            <div>
-                <h1>About</h1>
-            </div>
-            <div>
-                <h1>Projects</h1>
-            </div>
-            <div>
-                <h1>Blog</h1>
-            </div>
-            <div>
-                <h1>Contact</h1>
-            </div>
-        </div>
+        </nav>
     )
 }
 
