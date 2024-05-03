@@ -67,8 +67,7 @@ function App() {
         <button className={` ${activeSection === 'Blog' && 'font-bold'}`} onClick={() => scrollToSection('Blog')}>Blog</button>
         <button className={` ${activeSection === 'Contact' && 'font-bold'}`} onClick={() => scrollToSection('Contact')}>Contact</button>
       </div>
-      {/* Your sections go here */}
-      <div ref={homeRef}>
+      <div ref={homeRef} className='border-2 border-black'>
         <Home />
       </div>
       <div ref={aboutRef}>
