@@ -3,7 +3,7 @@ import ReactRotatingText from 'react-rotating-text';
 
 const Home = () => {
     return (
-        <div>
+        <div className='border-black'>
             <div className='flex justify-center py-5'>
                 <h1 className="text-4xl">Welcome!</h1>
             </div>
