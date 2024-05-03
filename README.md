@@ -1,2 +1,2 @@
-# react-tailwind-portfolio
+# react-portfolio
 my portfolio. built entirely with react and tailwind.
