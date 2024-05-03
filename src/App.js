@@ -60,15 +60,21 @@ function App() {
 
   return (
     <div>
-      <div className='border flex justify-center space-x-5 py-4 sticky top-0 bg-white'>
+      <header className='border flex justify-center space-x-5 py-4 sticky top-0 z-2 bg-white'>
         <button className={`${activeSection === 'Home' && 'font-bold'}`} onClick={() => scrollToSection('Home')}>Home</button>
         <button className={` ${activeSection === 'About' && 'font-bold'}`} onClick={() => scrollToSection('About')}>About</button>
         <button className={`${activeSection === 'Projects' && 'font-bold'}`} onClick={() => scrollToSection('Projects')}>Projects</button>
         <button className={` ${activeSection === 'Blog' && 'font-bold'}`} onClick={() => scrollToSection('Blog')}>Blog</button>
         <button className={` ${activeSection === 'Contact' && 'font-bold'}`} onClick={() => scrollToSection('Contact')}>Contact</button>
-      </div>
-      <div ref={homeRef} className='border-2 border-black'>
+      </header>
+      <div ref={homeRef}>
         <Home />
+        <div className='bg-white h-screen flex flex-col justify-center items-center'>
+          <h1 className=' text-black text-4xl'>I am</h1>
+        </div>
+        <div className='bg-black  h-screen flex flex-col justify-center items-center'>
+          <h1 className='text-white text-4xl'>Rahul Hoque</h1>
+        </div>
       </div>
       <div ref={aboutRef}>
         <About />

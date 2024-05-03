@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactRotatingText from 'react-rotating-text';
-import tsParticles from "react-tsparticles";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { useCallback } from "react";
@@ -51,10 +50,10 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="w-screen h-screen bg-black">
-          <Particles options={options} init={particlesInit}/>
-          <div className="absolute left-0 top-1/2 transform -translate-y-1/2 text-center">
-            <div className="ml-4 text-left text-white"> {/* Adjust the margin and alignment */}
+        <div className=" h-screen bg-black">
+            <Particles options={options} init={particlesInit} className="top-0 left-0 w-full h-full z-0"/>
+          <div className="absolute top-1/2 left-4 transform -translate-y-1/2 text-left text-white z-1">
+            <div>
               <h1 className="text-4xl">Welcome.</h1>
               <div className="flex flex-col justify-center items-center">
                 <p className="mb-2">I am a</p>
