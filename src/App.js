@@ -53,7 +53,7 @@ function App() {
     return () => {
       document.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  },);
 
   return (
     <div>

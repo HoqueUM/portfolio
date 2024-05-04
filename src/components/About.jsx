@@ -29,7 +29,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className='flex justify-center items-center w-1/2'>
-                    <img src={headshot} className='max-w-md'/>
+                    <img src={headshot} alt='Rahul Hoque - Headshot' className='max-w-md'/>
                 </div>
             </div>
         </div>
