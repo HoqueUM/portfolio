@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactRotatingText from 'react-rotating-text';
-import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import Particles from 'react-particles'
 import { useCallback } from "react";
 
 const Home = () => {

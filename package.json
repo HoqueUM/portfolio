@@ -20,7 +20,6 @@
     "react-scripts": "5.0.1",
     "react-scrollspy": "^3.4.3",
     "react-sticky": "^6.0.3",
-    "react-tsparticles": "^2.12.2",
     "tsparticles": "^2.12.0",
     "vite": "^5.2.11",
     "web-vitals": "^2.1.4"
