@@ -1,7 +1,6 @@
 import React from 'react';
 import resume from './resume.pdf'
 import { Document, Page, pdfjs } from 'react-pdf'
-import { LuHeartHandshake } from 'react-icons/lu';
 const Resume = () => {
     return (
         <div className='bg-black'>
