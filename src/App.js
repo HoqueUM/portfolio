@@ -1,12 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import TopBar from './components/TopBar';
 import Home from './components/Home';
 import About from './components/About';
 import Projects from './components/Projects';
-import Blog from './components/Blog';
-import Contact from './components/Contact';
-import ReactRotatingText from 'react-rotating-text';
-import Scrollspy from 'react-scrollspy';
+import Resume from './components/Resume';
 
 function App() {
   const [activeSection, setActiveSection] = useState('Home');
@@ -15,22 +11,23 @@ function App() {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
-  const blogRef = useRef(null);
-  const contactRef = useRef(null);
+  const resumeRef = useRef(null);
 
   // Map section IDs to their refs
   const sectionRefs = {
     Home: homeRef,
     About: aboutRef,
     Projects: projectsRef,
-    Blog: blogRef,
-    Contact: contactRef
+    Resume: resumeRef,
   };
 
   // Function to scroll to a section
   const scrollToSection = (section) => {
+    const navbarHeight = document.querySelector('header').offsetHeight;
+    const sectionOffsetTop = sectionRefs[section].current.offsetTop - navbarHeight;
+    
     window.scrollTo({
-      top: sectionRefs[section].current.offsetTop,
+      top: sectionOffsetTop,
       behavior: "smooth"
     });
   };
@@ -63,31 +60,22 @@ function App() {
       <header className='border flex justify-center space-x-5 py-4 sticky top-0 z-2 bg-white'>
         <button className={`${activeSection === 'Home' && 'font-bold'}`} onClick={() => scrollToSection('Home')}>Home</button>
         <button className={` ${activeSection === 'About' && 'font-bold'}`} onClick={() => scrollToSection('About')}>About</button>
+        <button className={`${activeSection === 'Resume' && 'font-bold'}`} onClick={() => scrollToSection('Resume')}>Resume</button>
         <button className={`${activeSection === 'Projects' && 'font-bold'}`} onClick={() => scrollToSection('Projects')}>Projects</button>
-        <button className={` ${activeSection === 'Blog' && 'font-bold'}`} onClick={() => scrollToSection('Blog')}>Blog</button>
-        <button className={` ${activeSection === 'Contact' && 'font-bold'}`} onClick={() => scrollToSection('Contact')}>Contact</button>
       </header>
       <div ref={homeRef}>
         <Home />
-        <div className='bg-white h-screen flex flex-col justify-center items-center'>
-          <h1 className=' text-black text-4xl'>I am</h1>
-        </div>
-        <div className='bg-black  h-screen flex flex-col justify-center items-center'>
-          <h1 className='text-white text-4xl'>Rahul Hoque</h1>
-        </div>
       </div>
       <div ref={aboutRef}>
         <About />
       </div>
+      <div ref={resumeRef}>
+        <Resume />
+      </div>
       <div ref={projectsRef}>
         <Projects />
       </div>
-      <div ref={blogRef}>
-        <Blog />
-      </div>
-      <div ref={contactRef}>
-        <Contact />
-      </div>
+      <footer className='flex justify-center'>Made with ❤️ by Rahul Hoque</footer>
     </div>
   );
 }
