@@ -3,7 +3,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Projects from './components/Projects';
 import Resume from './components/Resume';
-import RH from './rh.png';
+import RH from './rh.png'
 
 function App() {
   const [activeSection, setActiveSection] = useState('Home');
@@ -59,16 +59,14 @@ function App() {
   return (
     <div>
       <header className='border flex py-4 sticky top-0 z-2 bg-white justify-between items-center'>
-        <div className="flex items-center">
-          <img src={RH} alt='RH' className="h-8 ml-4 p-0" />
-        </div>
-        <div className='flex justify-center space-x-5 flex-grow'>
+        <img src={RH} alt='RH' className="h-8 ml-4" />
+        <div className='justify-center space-x-5'>
           <button className={`${activeSection === 'Home' && 'font-bold'}`} onClick={() => scrollToSection('Home')}>Home</button>
           <button className={` ${activeSection === 'About' && 'font-bold'}`} onClick={() => scrollToSection('About')}>About</button>
           <button className={`${activeSection === 'Resume' && 'font-bold'}`} onClick={() => scrollToSection('Resume')}>Resume</button>
           <button className={`${activeSection === 'Projects' && 'font-bold'}`} onClick={() => scrollToSection('Projects')}>Projects</button>
         </div>
-        <div className="mr-14"></div> {/* Adjust margin if needed */}
+        <div className="mr-4"></div> {/* Adjust margin if needed */}
       </header>
       <div ref={homeRef}>
         <Home />
@@ -82,7 +80,7 @@ function App() {
       <div ref={projectsRef}>
         <Projects />
       </div>
-      <footer className='flex justify-center'>Made with ❤️ by Rahul Hoque</footer>
+      <footer className='flex justify-center py-2'>Made with ❤️ by Rahul Hoque</footer>
     </div>
   );
 }
