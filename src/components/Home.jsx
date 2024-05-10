@@ -53,12 +53,12 @@ const Home = () => {
         <div className=" h-screen bg-black">
             <Particles options={options} init={particlesInit} className="top-0 left-0 w-full h-full z-0"/>
           <div className="absolute top-1/2 left-4 transform -translate-y-1/2 text-left text-white z-1">
-            <div className='z-0'>
-              <h1 className='text-7xl px-10'>Welcome.</h1>
-              <div className="flex flex-col justify-center items-center px-4">
+            <div>
+              <h1 className='text-5xl'>Welcome.</h1>
+              <div className="flex flex-col justify-center items-center">
                 <p className="mb-2 text-3xl">I am a</p>
                 <div className="text-center text-3xl mb-2">
-                  <ReactRotatingText items={['Builder', 'Developer', 'Designer', 'Student']} />
+                  <ReactRotatingText items={['Builder', 'Designer', 'Student']} />
                 </div>
               </div>
             </div>
