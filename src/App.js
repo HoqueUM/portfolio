@@ -24,7 +24,7 @@ function App() {
 
   // Function to scroll to a section
   const scrollToSection = (section) => {
-    const navbarHeight = document.querySelector('header').offsetHeight;
+    const navbarHeight = document.getElementById('head').offsetHeight;
     const sectionOffsetTop = sectionRefs[section].current.offsetTop - navbarHeight;
     
     window.scrollTo({
@@ -58,16 +58,23 @@ function App() {
 
   return (
     <div>
-      <header className='border flex py-4 sticky top-0 z-2 bg-white justify-between items-center'>
-        <img src={RH} alt='RH' className="h-8 ml-4" />
-        <div className='justify-center space-x-5'>
-          <button className={`${activeSection === 'Home' && 'font-bold'}`} onClick={() => scrollToSection('Home')}>Home</button>
-          <button className={` ${activeSection === 'About' && 'font-bold'}`} onClick={() => scrollToSection('About')}>About</button>
-          <button className={`${activeSection === 'Resume' && 'font-bold'}`} onClick={() => scrollToSection('Resume')}>Resume</button>
-          <button className={`${activeSection === 'Projects' && 'font-bold'}`} onClick={() => scrollToSection('Projects')}>Projects</button>
+      <div className='pt-[3.5rem] left-0' id='head'>
+        <div className='fixed top-0 z-50 bg-white border-[1.5px] w-full'>
+          <div className='flex items-center px-5 lg:px-7.5 xl:px-10 max-lg: py-4'> 
+            <a className='absolute w-[rem] ' href='#hero'>
+              <img src={RH} width={40} height={10}/>
+            </a>
+            <nav className='flex mx-auto static top-[5rem] left-0 '>
+              <div className='relative z-2 flex flex-row items-center justify-center m-auto space-x-4'>
+              <button className={`${activeSection === 'Home' && 'font-bold'}`} onClick={() => scrollToSection('Home')}>Home</button>
+              <button className={` ${activeSection === 'About' && 'font-bold'}`} onClick={() => scrollToSection('About')}>About</button>
+              <button className={`${activeSection === 'Resume' && 'font-bold'}`} onClick={() => scrollToSection('Resume')}>Resume</button>
+              <button className={`${activeSection === 'Projects' && 'font-bold'}`} onClick={() => scrollToSection('Projects')}>Projects</button>
+              </div>
+            </nav>
+          </div>
         </div>
-        <div className="mr-4"></div> {/* Adjust margin if needed */}
-      </header>
+      </div>
       <div ref={homeRef}>
         <Home />
       </div>

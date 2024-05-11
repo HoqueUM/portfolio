@@ -17,6 +17,7 @@
     "react-pdf": "^8.0.0",
     "react-responsive": "^10.0.0",
     "react-rotating-text": "^1.4.1",
+    "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
     "react-scrollspy": "^3.4.3",
     "react-sticky": "^6.0.3",
