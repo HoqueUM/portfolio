@@ -62,7 +62,7 @@ function App() {
         <div className='fixed top-0 z-50 bg-white border-[1.5px] w-full'>
           <div className='flex items-center px-5 lg:px-7.5 xl:px-10 max-lg: py-4'> 
             <a className='absolute w-[rem] ' href='#hero'>
-              <img src={RH} width={40} height={10}/>
+              <img src={RH} width={40} height={10} alt='logo'/>
             </a>
             <nav className='flex mx-auto static top-[5rem] left-0 '>
               <div className='relative z-2 flex flex-row items-center justify-center m-auto space-x-4'>
