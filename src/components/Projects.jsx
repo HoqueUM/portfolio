@@ -5,8 +5,8 @@ const Projects = () => {
         <div>
             <br></br>
             <header className='flex flex-col justify-center items-center'>
-                    <p className='text-4xl'>Resume</p>
-                    <p>You know, the important stuff.</p>
+                    <p className='text-4xl'>Projects</p>
+                    <p>What I'm working on.</p>
             </header>
             <div className='flex flex-col h-screen justify-center items-center'>
                     <p className='mb-2 '> ⌛ Coming soon ⌛</p>
